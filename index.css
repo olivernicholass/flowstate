@@ -1,3 +1,45 @@
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+@media (max-width: 600px) {
+  .desktop-1 {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .flow, .break, .lazy {
+    width: 50px; /* Adjust width for smaller screens */
+    height: 20px; /* Adjust height for smaller screens */
+  }
+}
+Thes
+.desktop-1 {
+  position: relative;
+  background-color: var(--color-steelblue);
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  background-size: cover;
+  font-family: var(--font-jetbrains-mono);
+}
+
+.timer {
+  aspect-ratio: 3/2; /* Adjust the aspect ratio based on your design */
+}
+
+@media (max-width: 600px) {
+  .timer {
+    aspect-ratio: 16/9; /* Adjust for smaller screens */
+  }
+}
+
 .flowstate,
 .time-to-focus {
   position: absolute;
