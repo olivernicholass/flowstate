@@ -1,6 +1,9 @@
 let timer;
 let time = 25 * 60; 
 
+
+// Function for when the user hits start/stop.
+
 function startTimer() {
   const startButton = document.getElementById("startButton");
 
@@ -13,6 +16,9 @@ function startTimer() {
     startButton.textContent = "stop";
   }
 }
+
+
+// Function for updating the timer when it has finished.
 
 function updateTimer() {
   const timerElement = document.querySelector(".timer");
@@ -30,13 +36,12 @@ function updateTimer() {
   }
 }
 
+// Function that re-creates each task with the same elements (template).
 
 function createDivWithText(text) {
-  // Create the main div element
   const mainDiv = document.createElement('div');
   mainDiv.className = 'rectangle-group';
 
-  // Create child div elements
   const childDiv = document.createElement('div');
   childDiv.className = 'group-child';
 
@@ -46,24 +51,20 @@ function createDivWithText(text) {
   const innerDiv = document.createElement('div');
   innerDiv.className = 'group-inner';
 
-  // Create input element
   const inputElement = document.createElement('input');
   inputElement.className = 'add-task';
   inputElement.placeholder = 'Add task...';
   inputElement.type = 'text';
   inputElement.id = 'taskInput';
-
-  // Set the entered text as the value of the input element
   inputElement.value = text;
 
-  // Create button elements
+
   const dotsButton = document.createElement('button');
   dotsButton.className = 'dots-2-1';
 
   const checkedButton = document.createElement('button');
   checkedButton.className = 'checked-1-1';
 
-  // Append child elements to the main div
   mainDiv.appendChild(childDiv);
   mainDiv.appendChild(itemDiv);
   mainDiv.appendChild(innerDiv);
@@ -74,25 +75,20 @@ function createDivWithText(text) {
   return mainDiv;
 }
 
-// Event listener for Enter key press
+
+// When the user presses enter, we create a new task with that name, 
+// calling the createDivWithText function to keep the same format.
+
 function handleKeyPress(event) {
   if (event.key === 'Enter') {
-    // Get the entered text from the input element
     const enteredText = event.target.value;
-
-    // Create a new div with the entered text
     const newDiv = createDivWithText(enteredText);
-
-    // Append the new div to the container
     taskContainer.appendChild(newDiv);
-
-    // Clear the input field
     event.target.value = '';
   }
 }
 
 const numberOfDivs = 1;
-
 const taskContainer = document.createElement('div');
 taskContainer.id = 'taskContainer'; // Use a unique id
 document.body.appendChild(taskContainer);
@@ -118,29 +114,20 @@ for (let i = 0; i < numberOfDivs; i++) {
   mainDiv.appendChild(checkedButton);
 
   taskContainer.appendChild(mainDiv);
-
   inputElement.addEventListener('keypress', handleKeyPress);
 }
 
-let verticalPosition = 756; // Add this variable to keep track of the vertical position
+let verticalPosition = 756; 
 
-// Event listener for Enter key press
+
 function handleKeyPress(event) {
   if (event.key === 'Enter') {
-    // Get the entered text from the input element
     const enteredText = event.target.value;
 
-    // Create a new div with the entered text
     const newDiv = createDivWithText(enteredText);
-
-    // Set the vertical position for the new div and increment for the next one
     newDiv.style.top = `${verticalPosition}px`;
-    verticalPosition += 90; // Adjust the value as needed for the spacing
-
-    // Append the new div to the container
+    verticalPosition += 90; 
     taskContainer.appendChild(newDiv);
-
-    // Clear the input field
     event.target.value = '';
   }
 }
