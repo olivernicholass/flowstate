@@ -8,15 +8,15 @@
 
 @media (max-width: 600px) {
   .desktop-1 {
-    font-size: 16px; /* Adjust font size for smaller screens */
+    font-size: 16px; 
   }
 
   .flow, .break, .lazy {
-    width: 50px; /* Adjust width for smaller screens */
-    height: 20px; /* Adjust height for smaller screens */
+    width: 50px; 
+    height: 20px; 
   }
 }
-Thes
+
 .desktop-1 {
   position: relative;
   background-color: var(--color-steelblue);
@@ -31,12 +31,12 @@ Thes
 }
 
 .timer {
-  aspect-ratio: 3/2; /* Adjust the aspect ratio based on your design */
+  aspect-ratio: 3/2; 
 }
 
 @media (max-width: 600px) {
   .timer {
-    aspect-ratio: 16/9; /* Adjust for smaller screens */
+    aspect-ratio: 16/9;
   }
 }
 
@@ -181,12 +181,12 @@ Thes
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 90px; /* Adjusted font size */
+  font-size: 90px; 
   color: var(--color-white);
   font-family: var(--font-jetbrains-mono);
   text-align: center;
-  width: 300px; /* Adjusted width */
-  height: 140px; /* Adjusted height */
+  width: 300px; 
+  height: 140px;
 }
 
 
@@ -283,7 +283,7 @@ Thes
   position: relative;
   background-color: var(--color-steelblue);
   width: 100%;
-  min-height: 100vh; /* Set the minimum height to 100% of the viewport height */
+  min-height: 100vh;
   overflow: hidden;
   text-align: left;
   font-size: var(--font-size-xl);
@@ -318,7 +318,7 @@ Thes
   text-align: center;
   width: 206px;
   height: 55px;
-  transition: transform 0.3s ease-in-out; /* Add a transition for a smooth effect */
+  transition: transform 0.3s ease-in-out; 
 }
 
 
@@ -343,7 +343,7 @@ Thes
 }
 
 .start:hover {
-  transform: scale(1.1); /* Apply the scale transformation on hover */
+  transform: scale(1.1);
 }
 
 .task-list li {
@@ -370,9 +370,9 @@ Thes
   width: 74px;
   height: 25px;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease-in-out; /* Add a transition for a smooth effect */
+  transition: transform 0.3s ease-in-out; 
 }
 
 .flow:hover, .break:hover, .lazy:hover, .checked-1-1:hover{
-  transform: scale(1.1); /* Apply the scale transformation on hover */
+  transform: scale(1.1); 
 }
