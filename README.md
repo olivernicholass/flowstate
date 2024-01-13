@@ -1,3 +1,3 @@
-# flowstate
+# Flowstate 
 
-Description Coming Soon..
+A task manager, currently in developement..
